@@ -55,3 +55,17 @@ if (Meteor.isCordova) {
 }
 
 ````
+
+### Location Data:
+
+````javascript
+{
+ "latitude":47.000000,
+ "longitude":-122.000000,
+ "accuracy":20,
+ "altitude":0,
+ "speed":0
+ "timestamp":1446873979589,
+ "heading":0
+}
+````
