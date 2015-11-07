@@ -24,9 +24,11 @@ BackgroundLocation
 ````
 
 ````javascript
-//Congfigure Plugin
+//Only start if this is a cordova project
 if (Meteor.isCordova) {
+  //Only run commands after cordova has finished device Ready
   Meteor.startup(function() {
+    //Configure Plugin
     BackgroundLocation.configure({
       desiredAccuracy: 5, // Desired Accuracy of the location updates (lower means more accurate but more battery consumption)
       distanceFilter: 1, // (Meters) How far you must move from the last point to trigger a location update
