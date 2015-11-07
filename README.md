@@ -1,7 +1,7 @@
 # cordova-background-geolocation-services
 Background Geolocation For Android and iOS with pure javascript callbacks.
 
-#About
+# About
 This is a new background geolocation plugin that aims at getting constant location updates in the background. 
 
 Meaning if you request a location updates every 3 seconds, you will get one every 3 seconds. Mind your users battery!
@@ -13,7 +13,7 @@ https://github.com/pmwisdom/cordova-background-geolocation-services
 
 
 
-###Setup: 
+### Setup:
 * Need to make sure you have Google Play Services AND Google Repository installed via your android-sdk manager prior to building your application with this. It will be under the extras part of the sdk manager. More information can be found here: http://developer.android.com/sdk/installing/adding-packages.html.
 
 ### How to use: 
