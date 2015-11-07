@@ -47,11 +47,11 @@ if (Meteor.isCordova) {
 
     //Start the Background Tracker. When you enter the background tracking will start, and stop when you enter the foreground.
     BackgroundLocation.start();
+    
+    ///later, to stop
+    BackgroundLocation.stop();
 
   });
 }
 
-
-///later, to stop
-BackgroundLocation.stop();
 ````
