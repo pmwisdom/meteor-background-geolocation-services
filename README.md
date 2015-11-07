@@ -38,7 +38,7 @@ BackgroundLocation.configure({
 
 //Register a callback for location updates, this is where location objects will be sent in the background
 BackgroundLocation.registerForLocationUpdates(function(location) {
-     console.log("We got a BG Update" + JSON.stringify(location));
+     console.log("We got a Background Update" + JSON.stringify(location));
 }, function(err) {
      console.log("Error: Didnt get an update", err);
 });
