@@ -20,7 +20,6 @@ Package.onUse(function(api) {
   api.use('ecmascript');
 
   api.addFiles('background-geolocation-plus.js');
-
   api.export('BackgroundLocation');
 });
 
