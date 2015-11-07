@@ -25,26 +25,31 @@ BackgroundLocation
 
 ````javascript
 //Congfigure Plugin
-BackgroundLocation.configure({
-     desiredAccuracy: 20, // Desired Accuracy of the location updates (lower means more accurate but more battery consumption)
-     distanceFilter: 5, // (Meters) How far you must move from the last point to trigger a location update
-     debug: true, // <-- Enable to show visual indications when you receive a background location update
-     interval: 9000, // (Milliseconds) Requested Interval in between location updates.
-     //ANDROID ONLY BELOW
-     notificationTitle: 'BG Plugin', // <-- customize the title of the notification
-     notificationText: 'Tracking', // <-- customize the text of the notification
-     fastestInterval: 5000, // <-- (Milliseconds) - Fastest interval your app / server can handle updates
-});
+if (Meteor.isCordova) {
+  Meteor.startup(function() {
+    BackgroundLocation.configure({
+      desiredAccuracy: 5, // Desired Accuracy of the location updates (lower means more accurate but more battery consumption)
+      distanceFilter: 1, // (Meters) How far you must move from the last point to trigger a location update
+      debug: true, // <-- Enable to show visual indications when you receive a background location update
+      interval: 9000, // (Milliseconds) Requested Interval in between location updates.
+      //ANDROID ONLY BELOW
+      notificationTitle: 'BG Plugin', // <-- customize the title of the notification
+      notificationText: 'Tracking', // <-- customize the text of the notification
+      fastestInterval: 5000, // <-- (Milliseconds) - Fastest interval your app / server can handle updates
+    });
 
-//Register a callback for location updates, this is where location objects will be sent in the background
-BackgroundLocation.registerForLocationUpdates(function(location) {
-     console.log("We got a Background Update" + JSON.stringify(location));
-}, function(err) {
-     console.log("Error: Didnt get an update", err);
-});
+    //Register a callback for location updates, this is where location objects will be sent in the background
+    BackgroundLocation.registerForLocationUpdates(function (location) {
+      console.log("We got a Background Update" + JSON.stringify(location));
+    }, function (err) {
+      console.log("Error: Didnt get an update", err);
+    });
 
-//Start the Background Tracker. When you enter the background tracking will start, and stop when you enter the foreground.
-BackgroundLocation.start();
+    //Start the Background Tracker. When you enter the background tracking will start, and stop when you enter the foreground.
+    BackgroundLocation.start();
+
+  });
+}
 
 
 ///later, to stop
