@@ -12,7 +12,7 @@ Package.describe({
 
 Cordova.depends({
   "cordova-plugin-geolocation" : "1.0.1",
-  "org.flybuy.cordova.background-location-services" : "https://github.com/pmwisdom/cordova-background-geolocation-services.git#14ea2ab3b2f5debc007aabd28f765905835fbc40"
+  "org.flybuy.cordova.background-location-services" : "https://github.com/pmwisdom/cordova-background-geolocation-services.git#3ee973d157a91b9b54bc87e9807c6b59efb70224"
 });
 
 Package.onUse(function(api) {
