@@ -47,16 +47,13 @@ BackgroundLocation = {
             throw new Meteor.Error(this.tag, 'You must register for location updates before starting background location updates');
         }
 
-        if(!this.started) {
-            this.plugin.start();
-        }
+        this.plugin.start();
+
     },
     stop: function() {
         if(!this.havePlugin()) return;
 
-        if(this.started) {
-            this.plugin.stop();
-        }
+        this.plugin.stop();
     }
 };
 
