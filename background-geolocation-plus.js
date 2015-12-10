@@ -13,7 +13,7 @@ BackgroundLocation = {
         notificationTitle: 'BG Plugin',
         notificationText: 'Tracking',
         fastestInterval: 5000,
-        useActivityDetecton: false
+        useActivityDetection: false
     },
     getPlugin: function() {
         this.plugin = window.plugins.backgroundLocationServices;
@@ -40,6 +40,11 @@ BackgroundLocation = {
 
         this.hasLocationCallback = true;
         this.plugin.registerForLocationUpdates(success, failure);
+    },
+    registerForActivityUpdates: function(success, failure){
+        if(!this.havePlugin()) return;
+
+        this.plugin.registerForActivityUpdates(success, failure);
     },
     start: function() {
         if(!this.havePlugin()) return;
