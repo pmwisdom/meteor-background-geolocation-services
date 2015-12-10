@@ -47,6 +47,7 @@ if (Meteor.isCordova) {
     }, function (err) {
       console.log("Error: Didnt get an update", err);
     });
+    
 
     //Start the Background Tracker. 
     //When you enter the background tracking will start.
