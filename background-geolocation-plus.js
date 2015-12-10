@@ -12,7 +12,8 @@ BackgroundLocation = {
         //Android Only
         notificationTitle: 'BG Plugin',
         notificationText: 'Tracking',
-        fastestInterval: 5000
+        fastestInterval: 5000,
+        useActivityDetecton: false
     },
     getPlugin: function() {
         this.plugin = window.plugins.backgroundLocationServices;
