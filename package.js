@@ -1,6 +1,6 @@
 Package.describe({
   name: 'mirrorcell:background-geolocation-plus',
-  version: '1.1.3',
+  version: '1.1.4',
   // Brief, one-line summary of the package.
   summary: 'Cordova Background Geolocation For Android and iOS with pure javascript callbacks.',
   // URL to the Git repository containing the source code for this package.
@@ -12,7 +12,7 @@ Package.describe({
 
 Cordova.depends({
   "cordova-plugin-geolocation" : "1.0.1",
-  "org.flybuy.cordova.background-location-services" : "https://github.com/pmwisdom/cordova-background-geolocation-services.git#95db098ed534dcdbb0bfbd98c347d214681519a9"
+  "org.flybuy.cordova.background-location-services" : "https://github.com/pmwisdom/cordova-background-geolocation-services.git#bd1d3d2e8a65585614f0d2278ecd0cfada450652"
 });
 
 Package.onUse(function(api) {
