@@ -1,10 +1,10 @@
 Package.describe({
   name: 'mirrorcell:background-geolocation-plus',
-  version: '1.1.5',
+  version: '1.1.6',
   // Brief, one-line summary of the package.
   summary: 'Cordova Background Geolocation For Android and iOS with pure javascript callbacks.',
   // URL to the Git repository containing the source code for this package.
-  git: 'https://github.com/pmwisdom/cordova-background-geolocation-services',
+  git: 'https://github.com/pmwisdom/meteor-background-geolocation-services',
   // By default, Meteor will default to using README.md for documentation.
   // To avoid submitting documentation, set this field to null.
   documentation: 'README.md'
