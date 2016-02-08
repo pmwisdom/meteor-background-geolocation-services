@@ -1,9 +1,13 @@
-// Write your package code here!
+var _options = {
+    fetchLocationOnStart : true
+};
+
 BackgroundLocation = {
     tag : 'BackgroundLocation',
     plugin : null,
     started : false,
     hasLocationCallback : false,
+    options : _options,
     config : {
         desiredAccuracy: 1,
         distanceFilter: 1,
@@ -67,8 +71,10 @@ if(Meteor.isCordova) {
     Meteor.startup(function () {
         BackgroundLocation.getPlugin();
 
-        navigator.geolocation.getCurrentPosition(function(location){
-        }, function(err){
-        });
+        if(BackgroundLocation.options.fetchLocationOnStart) {
+            navigator.geolocation.getCurrentPosition(function (location) {
+            }, function (err) {
+            });
+        }
     });
 }
