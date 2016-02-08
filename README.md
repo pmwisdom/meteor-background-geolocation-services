@@ -86,9 +86,9 @@ if (Meteor.isCordova) {
 ````
 
 ### Extra Options - These must be set before meteor.startup : 
-    fetchLocationOnStart -- Automatically fetches a foreground location update on start. This means you do not have to do so before you send a user into the background. If you set this to false, you must manually fetch the users location in the foreground before you start tracking in the background.
+* fetchLocationOnStart -- Automatically fetches a foreground location update on start. This means you do not have to do so before you send a user into the background. If you set this to false, you must manually fetch the users location in the foreground before you start tracking in the background. Defaults to TRUE.
+
     To set : 
-    
 ````javascript
     BackgroundLocation.options.fetchLocationOnStart = false;
 ````
