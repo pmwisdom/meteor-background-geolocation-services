@@ -11,7 +11,10 @@ I also made sure that android and iOS were exactly the same in their API, you do
 This is a meteor wrapper for my background geolocation plugin:
 https://github.com/pmwisdom/cordova-background-geolocation-services
 
-
+### Changelog (Cordova Plugin):
+ * 1.0.3 Activity Detection And Much Better Battery Life For iOS!
+ * 1.0.2 Error callbacks now correctly funnel through the location register
+ 
 
 ### Setup:
 * Need to make sure you have Google Play Services AND Google Repository installed via your android-sdk manager prior to building your application with this. It will be under the extras part of the sdk manager. More information can be found here: http://developer.android.com/sdk/installing/adding-packages.html.
@@ -34,11 +37,12 @@ if (Meteor.isCordova) {
       distanceFilter: 1, // (Meters) Distance between points aquired.
       debug: true, // Show debugging info on device.
       interval: 9000, // (Milliseconds) Requested Interval in between location updates.
+      useActivityDetection : true // Shuts off GPS when your phone is still, increasing battery life enormously
+      
       //[Android Only Below]
       notificationTitle: 'BG Plugin', // Customize the title of the notification.
       notificationText: 'Tracking', // Customize the text of the notification.
       fastestInterval: 5000, //(Milliseconds) - Fastest interval OS will give updates.
-      useActivityDetection : true // Shuts off GPS when your phone is still, increasing battery life enormously
     });
 
     //Register a callback for location updates.
@@ -49,7 +53,6 @@ if (Meteor.isCordova) {
       console.log("Error: Didnt get an update", err);
     });
     
-    //[Android Only]
     //Register a callback for activity updates 
     //If you set the option useActivityDetection to true you will recieve
     //periodic activity updates, see below for more information
