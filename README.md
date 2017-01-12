@@ -37,7 +37,7 @@ if (Meteor.isCordova) {
       distanceFilter: 1, // (Meters) Distance between points aquired.
       debug: true, // Show debugging info on device.
       interval: 9000, // (Milliseconds) Requested Interval in between location updates.
-      useActivityDetection : true // Shuts off GPS when your phone is still, increasing battery life enormously
+      useActivityDetection: true, // Shuts off GPS when your phone is still, increasing battery life enormously
       
       //[Android Only Below]
       notificationTitle: 'BG Plugin', // Customize the title of the notification.
